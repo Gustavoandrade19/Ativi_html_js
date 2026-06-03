@@ -10,7 +10,7 @@ function validarLogin(event) {
     let loginValido = true;
 
     // Regra: precisa ter '@'
-    if (!email.includes('@')) {
+    if (!email.includes('@gmail.com')) {
         erroEmail.style.display = 'block';
         loginValido = false;
     } else {

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Informações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container container-larga">
+        <h2>Informações Pessoais</h2>
+        <p class="subtitulo">Preencha os valores  </p>
+        
+        <form id="cadastro-form" onsubmit="salvarCadastro(event)">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="data-nasc">Data de Nascimento</label>
+                    <input type="date" id="data-nasc" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group" style="flex: 3;">
+                    <label for="rua">Rua / Logradouro</label>
+                    <input type="text" id="rua" placeholder="Nome da rua" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" placeholder="Nº" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cep">CEP</label>     
+                <input type="text" id="cep" placeholder="00000-000" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group" style="flex: 3;">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Sua cidade" required>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="estado">Estado (UF)</label>
+                    <input type="text" id="estado" placeholder="Ex: SP" maxlength="2" required>
+                </div>
+            </div>
+
+            <button type="submit">Avançar para Livros</button>
+        </form>
+        
+        <div id="msg-sucesso" class="success-msg" style="display: none;">
+            Dados salvos! Redirecionando...
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Executa a proteção de tela assim que a página carrega
+        verificarAutenticacao();
+    </script>
+</body>
+</html>

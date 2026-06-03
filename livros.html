@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container container-larga">
+        <h2>Inserção de Livros</h2>
+        <p class="subtitulo">Cadastre as informações da obra literária</p>
+        
+        <form id="livros-form" onsubmit="salvarLivro(event)">
+            <div class="form-group">
+                <label for="nome-livro">Nome do Livro</label>
+                <input type="text" id="nome-livro" placeholder="Ex: Dom Casmurro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="autor">Autor</label>
+                <input type="text" id="autor" placeholder="Ex: Machado de Assis" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="editora">Editora</label>
+                    <input type="text" id="editora" placeholder="Ex: Editora Abril" required>
+                </div>
+                <div class="form-group">
+                    <label for="ano-publicacao">Ano de Publicação</label>
+                    <input type="number" id="ano-publicacao" placeholder="Ex: 1899" min="1000" max="2026" required>
+                </div>
+            </div>
+
+            <button type="submit">Cadastrar Livro</button>
+            <button type="button" class="btn-secundario" onclick="logout()">Sair do Sistema</button>
+        </form>
+
+        <div id="msg-sucesso-livro" class="success-msg" style="display: none;">
+            Livro inserido com sucesso na biblioteca!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Executa a proteção de tela
+        verificarAutenticacao();
+    </script>
+</body>
+</html>

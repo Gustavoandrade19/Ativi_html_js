@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Seja Bem-vindo</h2>
+        <p class="subtitulo">Insira suas credenciais para acessar</p>
+        
+        <form id="login-form" onsubmit="validarLogin(event)">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" placeholder="DigiteSeuE-mail" required>
+                <div id="erro-email" class="error-message">Por favor, insira um e-mail válido (deve conter @).</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Mínimo 8 caracteres" required>
+                <div id="erro-senha" class="error-message">A senha deve ter no mínimo 8 caracteres.</div>
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
